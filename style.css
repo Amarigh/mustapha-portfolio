@@ -235,3 +235,33 @@ footer{
   .contact-details{flex-direction:column;gap:8px}
   footer{width:min(calc(100% - 26px),var(--max));flex-direction:column;align-items:flex-start}
 }
+
+.certifications{
+  margin-top:28px;padding:28px;border:1px solid var(--line);border-radius:var(--radius);
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025))
+}
+.cert-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px
+}
+.cert-card{
+  padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)
+}
+.cert-card h3{font-size:1.05rem;line-height:1.35;margin:0 0 12px}
+.cert-card p{margin:0 0 3px;color:#c3ccd8;font-size:.88rem}
+.cert-card span{color:var(--muted);font-size:.78rem}
+@media (max-width:760px){
+  .cert-grid{grid-template-columns:1fr}
+}
+
+.btn-resume{
+  background:rgba(101,214,196,.08);
+  color:var(--accent);
+  border-color:rgba(101,214,196,.32);
+}
+.btn-resume:hover{
+  background:rgba(101,214,196,.14);
+  border-color:rgba(101,214,196,.55);
+}
+@media (min-width:761px){
+  .nav{gap:18px}
+}
