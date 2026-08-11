@@ -1,0 +1,154 @@
+
+/* Resume language selector — supplemental styles */
+.resume-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.resume-dropdown > summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.resume-dropdown > summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-resume-dropdown > summary {
+  color: #c8d0dd;
+  font-size: .92rem;
+  transition: .2s;
+  padding: 8px 0;
+}
+
+.nav-resume-dropdown > summary:hover,
+.nav-resume-dropdown[open] > summary {
+  color: #fff;
+}
+
+.resume-options {
+  position: absolute;
+  z-index: 120;
+  top: calc(100% + 12px);
+  right: 0;
+  min-width: 230px;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 16px;
+  background: rgba(7,16,29,.97);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 22px 60px rgba(0,0,0,.34);
+}
+
+.hero-resume-dropdown .resume-options {
+  left: 0;
+  right: auto;
+  min-width: 250px;
+}
+
+.resume-options::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 22px;
+  width: 11px;
+  height: 11px;
+  background: rgba(7,16,29,.97);
+  border-left: 1px solid rgba(255,255,255,.11);
+  border-top: 1px solid rgba(255,255,255,.11);
+  transform: rotate(45deg);
+}
+
+.hero-resume-dropdown .resume-options::before {
+  right: auto;
+  left: 28px;
+}
+
+.resume-options a {
+  display: flex !important;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  padding: 11px 12px !important;
+  border-radius: 11px;
+  color: #fff !important;
+  text-decoration: none;
+  transition: background .18s ease, transform .18s ease;
+}
+
+.resume-options a:hover {
+  background: rgba(101,214,196,.10);
+  transform: translateX(2px);
+}
+
+.resume-options a > span {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.resume-options a div {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.resume-options strong {
+  font-size: .84rem;
+  font-weight: 800;
+}
+
+.resume-options small {
+  color: #8fa0b5;
+  font-size: .70rem;
+}
+
+.hero-resume-dropdown > summary.btn {
+  display: inline-flex;
+}
+
+/* Prevent the dropdown from being clipped in the hero actions */
+.hero-actions {
+  overflow: visible;
+}
+
+/* Mobile navigation */
+@media (max-width: 760px) {
+  .nav-resume-dropdown {
+    width: 100%;
+  }
+
+  .nav-resume-dropdown > summary {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .nav-resume-dropdown .resume-options {
+    position: static;
+    min-width: 0;
+    margin-top: 5px;
+    box-shadow: none;
+    background: rgba(255,255,255,.035);
+  }
+
+  .nav-resume-dropdown .resume-options::before {
+    display: none;
+  }
+
+  .hero-resume-dropdown .resume-options {
+    left: 0;
+    right: auto;
+  }
+}
+
+/* Current portfolio palette */
+.btn-resume {
+  color: var(--acid);
+  border-color: rgba(101, 214, 196, .28);
+  background: rgba(101, 214, 196, .07);
+}
+.btn-resume:hover {
+  border-color: rgba(101, 214, 196, .48);
+  background: rgba(101, 214, 196, .12);
+}
+.resume-options a:hover { background: rgba(101, 214, 196, .09); }
