@@ -18,13 +18,27 @@
 .nav-resume-dropdown > summary {
   color: #c8d0dd;
   font-size: .92rem;
-  transition: .2s;
-  padding: 8px 0;
+  border-radius: 9px;
+  transform-origin: center;
+  transition: color .2s ease, background-color .2s ease, box-shadow .2s ease, transform .2s ease;
+  padding: 7px 9px;
 }
 
 .nav-resume-dropdown > summary:hover,
+.nav-resume-dropdown > summary:focus-visible,
 .nav-resume-dropdown[open] > summary {
-  color: #fff;
+  color: #8ff3e2;
+  background: rgba(101, 214, 196, .18);
+  box-shadow: 0 10px 30px rgba(101, 214, 196, .26);
+  transform: translateY(-3px) scale(1.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-resume-dropdown > summary:hover,
+  .nav-resume-dropdown > summary:focus-visible,
+  .nav-resume-dropdown[open] > summary {
+    transform: none;
+  }
 }
 
 .resume-options {
